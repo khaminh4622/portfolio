@@ -19,7 +19,7 @@ a{color:var(--y)}
 button{font:inherit;cursor:pointer;color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--y);outline-offset:3px}
 #bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:4px;width:100%;background:var(--y);transform-origin:0 50%;transform:scaleX(0);z-index:70}
-#app{max-width:1180px;margin:0 auto;border-radius:40px 40px 0 0;overflow:clip;background:var(--k)}
+#app{width:100%;max-width:none;margin:0;border-radius:0;overflow:clip;background:var(--k)}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--g)}
 .nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 30px;padding:18px clamp(18px,4vw,38px)}
 .logo{display:flex;align-items:center;gap:10px;font-family:Lobster,"Brush Script MT",cursive;font-size:1.9rem;color:var(--tx);text-decoration:none;margin-right:auto}
@@ -181,6 +181,21 @@ footer{background:var(--k);color:var(--mu);padding:26px clamp(20px,6vw,70px) 40p
 .project-link:hover,.project-link:focus-visible{background:#273a2b;color:#ffce66}
 .project-card .face.back{border-radius:24px 24px 0 0}
 @media(max-width:560px){.project-card .flip{height:320px}}
+
+/* Full-bleed desktop layout: make the site fill the browser rather than a centered card */
+@media (min-width:861px){
+  .hero{min-height:760px;height:min(900px,calc(100svh - 70px));}
+  .mono{top:36px;left:0;right:0;padding-left:8%;font-size:clamp(3.6rem,7.4vw,9rem);white-space:nowrap;}
+  .photo{left:6%;top:25%;width:min(36%,490px);max-height:65%;aspect-ratio:5/6;}
+  .echo{left:35%;top:46%;font-size:clamp(3rem,6.2vw,7rem);}
+  .social{left:53%;top:49%;font-size:clamp(1rem,1.25vw,1.25rem);}
+  .tag{left:53%;right:3%;bottom:38px;}
+  section.sec{padding-left:clamp(45px,7vw,125px);padding-right:clamp(45px,7vw,125px);}
+}
+@media(min-width:861px) and (max-width:1100px){
+  .hero{min-height:700px}.photo{top:27%;width:38%}.social{left:52%;top:47%}.tag{left:52%}
+}
+@media(max-width:860px){.mono{font-size:clamp(2.4rem,9vw,5.3rem);letter-spacing:-.02em}.hero{min-height:0}}
 </style>
 </head>
 <body>
@@ -198,11 +213,11 @@ footer{background:var(--k);color:var(--mu);padding:26px clamp(20px,6vw,70px) 40p
  <svg class="sp" style="--s:34px;left:4.2%;top:37%;--dl:.6s"><use href="#st"/></svg>
  <svg class="sp" style="--s:38px;left:5%;bottom:11%;--dl:1.2s"><use href="#st"/></svg>
  <svg class="sp" style="--s:56px;left:2.6%;bottom:2%;--dl:1.8s"><use href="#st"/></svg>
- <h1 class="mono rv">PORTFOLIO</h1>
+ <h1 class="mono rv">KHA HOANG</h1>
  <div class="echo" aria-hidden="true"><span>PORTFOLIO</span><span>PORTFOLIO</span><span>PORTFOLIO</span></div>
  <figure class="photo rv pop"><img src="portrait-home.jpg" alt="Kha Hoang standing outdoors" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center center"></figure>
  <ul class="social"><li><a href="https://github.com/khaminh4622" target="_blank" rel="noopener">GH: /khaminh4622</a></li><li><a href="mailto:mkha4622@gmail.com">EM: mkha4622@gmail.com</a></li><li>LOC: San Jose, CA</li></ul>
- <div class="tag"><p class="make">I make <span class="sw" id="sw">AI that sorts clothes</span></p><div class="btns"><a class="cta" href="#work">View work</a><a class="ghost" href="#contact">Say hi</a></div></div>
+ <div class="tag"><p class="make">I make <span class="sw" id="sw">AI and engineering projects</span></p><div class="btns"><a class="cta" href="#work">View work</a><a class="ghost" href="#contact">Say hi</a></div></div>
 </div>
 
 <section class="cream hello" id="about">
@@ -215,7 +230,7 @@ footer{background:var(--k);color:var(--mu);padding:26px clamp(20px,6vw,70px) 40p
   <img class="about-photo" src="portrait-about.jpg" alt="Kha taking a mirror selfie on public transit" loading="lazy">
   <span class="py" style="top:5%;left:0">Class of 2026</span>
   <span class="py" style="top:47%;right:-2%">San Jose, CA</span>
-  <div class="cc"><h3 class="scr">Contact</h3><ul><li>+1 (408) 123-4567</li><li>mkha4622@gmail.com</li><li><a href="https://github.com/khaminh4622" target="_blank" rel="noopener">github.com/khaminh4622</a></li><li><a href="https://www.linkedin.com/in/kha-hoang-b60892337/" target="_blank" rel="noopener">LinkedIn / kha-hoang</a></li></ul></div>
+  <div class="cc"><h3 class="scr">Contact</h3><ul><li>San Jose, CA</li><li>mkha4622@gmail.com</li><li><a href="https://github.com/khaminh4622" target="_blank" rel="noopener">github.com/khaminh4622</a></li><li><a href="https://www.linkedin.com/in/kha-hoang-b60892337/" target="_blank" rel="noopener">LinkedIn / kha-hoang</a></li></ul></div>
  </div>
 </section>
 
