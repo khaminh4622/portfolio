@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Kha Hoang: student engineer in San Jose who builds AI and apps that help people.">
+<title>Kha Hoang: Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;600;800&family=Lobster&family=Monoton&display=swap" rel="stylesheet">
+<style>
+:root{--g:#334d38;--k:#0b0e0c;--y:#ffb21a;--cr:#e8e2cc;--pp:#ecebe6;--tx:#f3f0e4;--mu:#b9c4b8;--ln:rgba(243,240,228,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--pp);color:var(--tx);font-family:Inter,"Helvetica Neue",system-ui,sans-serif;font-size:18px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--g);z-index:60}
+a{color:var(--y)}
+button{font:inherit;cursor:pointer;color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:4px;width:100%;background:var(--y);transform-origin:0 50%;transform:scaleX(0);z-index:70}
+#app{max-width:1180px;margin:0 auto;border-radius:40px 40px 0 0;overflow:clip;background:var(--k)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--g)}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:8px 30px;padding:18px clamp(18px,4vw,38px)}
+.logo{display:flex;align-items:center;gap:10px;font-family:Lobster,"Brush Script MT",cursive;font-size:1.9rem;color:var(--tx);text-decoration:none;margin-right:auto}
+.logo svg{width:36px;height:36px;color:var(--y)}
+.mid{display:flex;gap:30px}
+.nav a.l{color:var(--tx);text-decoration:none;font-weight:300;opacity:.85;border-bottom:2px solid transparent;padding:2px 0;transition:opacity .3s,border-color .3s}
+.nav a.l:hover,.nav a.l.on{opacity:1;border-color:var(--y)}
+.cta{display:inline-block;background:var(--y);color:#241a05;font-weight:600;border-radius:99px;padding:10px 20px;text-decoration:none;font-size:.95rem;transition:transform .25s}
+.cta:hover{transform:translateY(-3px) scale(1.05)}
+.ghost{display:inline-block;border:2px solid var(--cr);color:var(--cr);font-weight:600;border-radius:99px;padding:8px 20px;text-decoration:none;font-size:.95rem;transition:transform .25s,background .25s,color .25s}
+.ghost:hover{transform:translateY(-3px);background:var(--cr);color:var(--k)}
+.sp{position:absolute;color:var(--y);width:var(--s);height:var(--s);z-index:3;animation:tw 3s ease-in-out infinite;animation-delay:var(--dl,0s)}
+@keyframes tw{50%{transform:scale(.7) rotate(20deg);opacity:.75}}
+.hero{position:relative;height:clamp(640px,66vw,780px);overflow:hidden;background:linear-gradient(var(--g) 0 calc(100% - 190px),var(--k) calc(100% - 190px))}
+.mono{position:absolute;left:0;right:0;top:34px;margin:0;padding-left:12%;font-family:Monoton,Impact,sans-serif;font-weight:400;font-size:clamp(1.8rem,7.6vw,6.8rem);line-height:1.1;color:var(--cr);z-index:1}
+.photo{position:absolute;left:7%;top:23%;width:36%;aspect-ratio:5/6;margin:0;z-index:2;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.photo svg{display:block;width:100%;height:100%}
+.echo{position:absolute;left:30%;top:42%;font-family:Bungee,Impact,sans-serif;font-size:clamp(2rem,6.4vw,5.9rem);line-height:.95;z-index:1}
+.echo span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--y);white-space:nowrap}
+.social{position:absolute;left:50%;top:44%;margin:0;padding:8px 22px 8px 6px;list-style:none;background:var(--g);z-index:2;letter-spacing:.05em;font-size:1.15rem;line-height:1.7}
+.social a{color:var(--tx);text-decoration:none}
+.social a:hover{color:var(--y)}
+.tag{position:absolute;left:50%;bottom:30px;z-index:2}
+.make{margin:0 0 12px;font-size:clamp(1.15rem,2.4vw,1.7rem);font-weight:600;display:flex;gap:.4em;flex-wrap:wrap}
+.sw{display:inline-block;color:var(--y);transition:opacity .35s,transform .35s}
+.sw.out{opacity:0;transform:translateY(-12px)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+section.sec{padding:90px clamp(20px,6vw,70px)}
+.on-g{background:var(--g)}.on-k{background:var(--k)}
+.h2{font-family:Bungee,Impact,sans-serif;font-weight:400;font-size:clamp(2.2rem,7vw,4.6rem);line-height:1;color:transparent;-webkit-text-stroke:2px var(--y);margin:0 0 10px;text-transform:uppercase}
+@supports not (-webkit-text-stroke:1px red){.h2,.echo span{color:var(--y)}}
+.sub{color:var(--mu);margin:0 0 32px;max-width:56ch}
+.statement{font-size:clamp(1.6rem,4.4vw,2.7rem);font-weight:800;line-height:1.25;letter-spacing:-.03em;max-width:22em;margin:0 0 70px}
+.statement .w{color:rgba(232,226,204,.3);transition:color .3s}
+.statement .w.on{color:var(--cr)}
+.sheet{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:28px;background:var(--k);border:1px solid var(--ln);border-radius:28px;padding:28px}
+.who .av{font-size:3.4rem;line-height:1;width:92px;height:92px;border-radius:24px;background:var(--y);display:grid;place-items:center;margin-bottom:14px;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(7px)}}
+.who h3{margin:0 0 10px;font-size:1.7rem;letter-spacing:-.04em}
+.who p{margin:0 0 6px;color:var(--mu);font-size:.98rem}
+.who b{color:var(--tx)}
+.mr{margin-bottom:14px}
+.mr .t{display:flex;justify-content:space-between;gap:10px;font-weight:600;font-size:.95rem;margin-bottom:5px}
+.mr .t span{color:var(--y);white-space:nowrap}
+.trk{height:12px;border-radius:99px;background:var(--ln);overflow:hidden}
+.fill{display:block;height:100%;width:var(--w);border-radius:99px;background:var(--y)}
+.mr.hot .fill{background:linear-gradient(90deg,var(--y),#ff5a3c)}
+.js .fill{width:0;transition:width 1.3s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i)*.12s + .3s)}
+.js .sheet.in .fill{width:var(--w)}
+.pup{margin-top:6px;border:0;background:var(--y);color:#241a05;font-weight:800;border-radius:99px;padding:10px 22px;transition:transform .2s}
+.pup:active{transform:scale(.92)}
+.sheet.pw{animation:shake .5s}
+@keyframes shake{20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+.tl{position:relative;padding-left:46px}
+.tl::before,.tl::after{content:"";position:absolute;left:14px;top:8px;width:4px;border-radius:4px;z-index:1}
+.tl::before{bottom:8px;background:var(--ln)}
+.tl::after{height:calc((100% - 16px)*var(--p,0));background:var(--y)}
+.step{position:relative;margin-bottom:34px}
+.step i{z-index:2;position:absolute;left:-46px;top:2px;width:32px;height:32px;border-radius:50%;background:var(--k);border:3px solid var(--ln);display:grid;place-items:center;font-style:normal;font-size:.9rem;font-weight:800;transition:background .4s,border-color .4s,transform .4s}
+.step.in i{background:var(--y);border-color:var(--y);color:#241a05;transform:scale(1.15)}
+.step h3{margin:0;font-size:1.6rem;letter-spacing:-.03em}
+.step p{margin:6px 0 0;color:var(--mu);max-width:50ch}
+.step .loot{font-size:.95rem}.step .loot b{color:var(--tx)}
+.tbc{margin:0;font-weight:800;color:var(--y);font-size:1.1rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}
+.flip{display:block;width:100%;perspective:1000px;background:none;border:0;padding:0;text-align:left;height:300px}
+.inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d}
+.flip[aria-pressed="true"] .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--k);color:var(--tx);border-radius:24px;padding:22px;display:flex;flex-direction:column;overflow:hidden}
+.face.back{transform:rotateY(180deg);background:var(--y);color:#241a05}
+.face .em{font-size:2.6rem;line-height:1;margin-bottom:10px}
+.face h3{margin:0 0 6px;font-size:1.4rem;letter-spacing:-.03em}
+.face p{margin:0;font-size:1rem;color:var(--mu)}
+.face.back p{color:#241a05}
+.face .tap{margin-top:auto;font-size:.85rem;font-weight:800;color:var(--y)}
+.face.back .tech{margin-top:auto;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem}
+.grp{margin:0 0 10px;color:var(--mu)}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.chip{border:2px solid var(--y);border-radius:99px;padding:8px 20px;font-weight:600}
+.big{font-family:Bungee,Impact,sans-serif;font-size:clamp(2rem,7vw,4.8rem);line-height:1;margin:0 0 28px;color:var(--cr)}
+.cream{background:#f6eddb;color:#1c1a14}
+.hello{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;align-items:center;padding:70px clamp(20px,6vw,70px) 90px}
+.scr{font-family:Lobster,"Brush Script MT",cursive;font-weight:400;line-height:1.05;margin:0 0 16px}
+.hello .scr{font-size:clamp(3rem,8vw,5.4rem)}
+.hello p{max-width:40ch;color:#3a3628;margin:0 0 22px}
+.lp{display:inline-flex;align-items:center;gap:10px;background:#ff6a3d;color:#fff;font-weight:600;text-decoration:none;border-radius:99px;padding:12px 26px;transition:transform .25s}
+.lp:hover{transform:translateY(-3px) scale(1.04)}
+.lp svg{width:18px;height:18px}
+.pstack{position:relative;width:100%;max-width:470px;margin-left:auto}
+.pstack>svg{display:block;width:100%}
+.pstack .about-photo{display:block;width:100%;height:440px;object-fit:cover;object-position:center 25%;border:12px solid #334d38;background:#334d38}
+.about-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.about-links .linkedin{background:#0a66c2;color:#fff}.cc a{color:#fff;text-decoration:none}.cc a:hover{text-decoration:underline}
+.py{position:absolute;background:var(--y);color:#241a05;font-weight:600;font-size:.9rem;border-radius:99px;padding:8px 20px;white-space:nowrap}
+.cc{position:absolute;right:-3%;bottom:3%;width:62%;background:#000;color:#fff;padding:16px 20px}
+.cc .scr{font-size:1.5rem;margin:0 0 8px;color:#fff}
+.cc ul{list-style:none;margin:0;padding:0;font-size:.82rem;line-height:1.9;word-break:break-word}
+.cc li::before{content:"\2726  ";color:var(--y)}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px 56px;align-items:start}
+.sc{font-family:Lobster,"Brush Script MT",cursive;font-weight:400;font-size:clamp(2.2rem,5vw,3rem);margin:0 0 20px;color:var(--y);line-height:1}
+.it{display:grid;grid-template-columns:24px 78px 1fr;gap:0 10px;margin-bottom:20px;align-items:start}
+.star{width:22px;height:22px;margin-top:3px;color:#ff6a3d}
+.it b{font-weight:800}
+.it small{display:block;color:var(--mu);font-size:.88rem;line-height:1.4}
+.xp{background:var(--y);color:#17110a;padding:30px;border-radius:4px;margin-top:34px}
+.xp .sc{color:#17110a}
+.xp .it small{color:#3a2c0c}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.pills span{background:#000;color:#fff;border-radius:99px;padding:6px 16px;font-size:.82rem;font-weight:600}
+.rbg{font-family:Bungee,Impact,sans-serif;font-size:clamp(2.6rem,8.6vw,6.8rem);line-height:.9;margin:0 0 30px;user-select:none}
+.rbg span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--y)}
+.rbg span:last-child{-webkit-text-stroke-color:#6a8d6e}
+@supports not (-webkit-text-stroke:1px red){.rbg span{color:var(--y)}}
+.lab{font-family:Lobster,"Brush Script MT",cursive;font-size:1.3rem;color:var(--cr);margin:0}
+.bd{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 22px}
+.bd span{width:42px;height:42px;border-radius:8px;background:#1f3324;border:1px solid var(--y);color:var(--y);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:10px;margin:10px 0 24px}
+.tools>div{background:#1f3324;border:1px solid var(--y);border-radius:14px;padding:12px 10px;text-align:center}
+.tools i{display:block;font-style:normal;font-size:1.7rem;line-height:1.2}.tools .brand-icon{display:block;width:42px;height:42px;object-fit:contain;margin:0 auto 8px}
+.tools b{display:block;font-size:.92rem}
+.tools small{display:block;color:var(--mu);font-size:.78rem;line-height:1.3}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;font-size:.92rem;margin:6px 0 4px}
+.more{display:grid;grid-template-columns:1fr 1fr;gap:50px;padding:80px clamp(20px,6vw,70px)}
+.more .sc{color:#17110a}
+.more .it small{color:#4a4636}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:46px}
+.facts b{display:block}
+.facts small{color:#4a4636;font-size:.88rem;line-height:1.3;display:block}
+.hob{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:start}
+.hob div{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;font-weight:600;font-size:.76rem;min-width:0;line-height:1.3;gap:4px}
+.hob i{display:grid;place-items:center;font-style:normal;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;font-size:29px;line-height:1;width:42px;height:42px;border:0;border-radius:0;background:none;margin:0}
+@media(max-width:480px){.hob{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.hob div{font-size:.62rem}.hob i{width:32px;height:34px;font-size:23px}}
+@media(max-width:860px){.hello,.rgrid,.more{grid-template-columns:1fr}.pstack{margin:0 auto}.cc{right:0}.it{grid-template-columns:22px 66px 1fr}.facts{grid-template-columns:1fr 1fr}}
+footer{background:var(--k);color:var(--mu);padding:26px clamp(20px,6vw,70px) 40px;font-size:.9rem}
+.secret{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:80;display:none;background:var(--y);color:#241a05;border:0;border-radius:99px;padding:12px 20px;font-weight:800;max-width:min(90vw,340px)}
+.secret.show{display:block;animation:pop .4s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{from{transform:scale(.5);opacity:0}}
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js .rv.l{transform:translateX(-44px)}
+.js .rv.pop{transform:scale(.85)}
+.js .rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+ .mid{order:3;width:100%;justify-content:space-between;gap:10px;font-size:.95rem}
+ .hero{height:auto;display:flex;flex-direction:column;gap:22px;padding:26px 20px 34px;background:linear-gradient(var(--g) 0 64%,var(--k) 64%)}
+ .mono,.photo,.social,.tag{position:static}
+ .mono{padding:0;font-size:9.6vw}
+ .photo{width:76%}
+ .echo,.sp.hide{display:none}
+ .social{background:none;padding:0}
+ .sheet{grid-template-columns:1fr;padding:22px}
+}
+@media (prefers-reduced-motion:reduce){.sp,.who .av,.sheet.pw{animation:none}.js .rv{opacity:1;transform:none;transition:none}.js .fill{transition:none}.inner,.step i{transition:none}html{scroll-behavior:auto}}
+.project-icon{width:54px;height:54px;margin-bottom:12px;display:grid;place-items:center}
+.project-icon svg{width:100%;height:100%;display:block}
+.project-card{position:relative;background:var(--k);border-radius:24px;overflow:hidden}
+.project-card .flip{height:292px}
+.project-card .face{border-radius:24px 24px 0 0;padding-bottom:15px}
+.project-card .tap{padding-bottom:0}
+.project-link{display:flex;position:relative;z-index:4;align-items:center;justify-content:center;min-height:47px;border-top:1px solid rgba(255,178,26,.25);font-size:.88rem;font-weight:800;color:var(--y);text-decoration:none;background:#171d18;transition:background .2s}
+.project-link:hover,.project-link:focus-visible{background:#273a2b;color:#ffce66}
+.project-card .face.back{border-radius:24px 24px 0 0}
+@media(max-width:560px){.project-card .flip{height:320px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="st" viewBox="0 0 24 24"><path d="M12 0C13 8 16 11 24 12 16 13 13 16 12 24 11 16 8 13 0 12 8 11 11 8 12 0Z" fill="currentColor"/></symbol></svg>
+<div id="bar"></div>
+<div id="app">
+<header><div class="nav">
+ <a class="logo" href="#hero"><svg><use href="#st"/></svg>Kha Hoang</a>
+ <nav class="mid" aria-label="Main"><a class="l" href="#about">About me</a><a class="l" href="#resume">Resume</a><a class="l" href="#work">Work</a><a class="l" href="#skills">Skills</a></nav>
+ <a class="cta" href="#contact">Get in touch!</a>
+</div></header>
+
+<div class="hero" id="hero">
+ <svg class="sp" style="--s:54px;left:2.5%;top:24%"><use href="#st"/></svg>
+ <svg class="sp" style="--s:34px;left:4.2%;top:37%;--dl:.6s"><use href="#st"/></svg>
+ <svg class="sp" style="--s:38px;left:5%;bottom:11%;--dl:1.2s"><use href="#st"/></svg>
+ <svg class="sp" style="--s:56px;left:2.6%;bottom:2%;--dl:1.8s"><use href="#st"/></svg>
+ <h1 class="mono rv">PORTFOLIO</h1>
+ <div class="echo" aria-hidden="true"><span>PORTFOLIO</span><span>PORTFOLIO</span><span>PORTFOLIO</span></div>
+ <figure class="photo rv pop"><img src="portrait-home.jpg" alt="Kha Hoang standing outdoors" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center center"></figure>
+ <ul class="social"><li><a href="https://github.com/khaminh4622" target="_blank" rel="noopener">GH: /khaminh4622</a></li><li><a href="mailto:mkha4622@gmail.com">EM: mkha4622@gmail.com</a></li><li>LOC: San Jose, CA</li></ul>
+ <div class="tag"><p class="make">I make <span class="sw" id="sw">AI that sorts clothes</span></p><div class="btns"><a class="cta" href="#work">View work</a><a class="ghost" href="#contact">Say hi</a></div></div>
+</div>
+
+<section class="cream hello" id="about">
+ <div>
+  <h2 class="scr rv">Hello,<br>I’m Kha!</h2>
+  <p class="rv" style="--d:.1s">I’m a student engineer in San Jose who loves building AI and apps that help people, and running long distances for fun. I’m currently studying Electrical Engineering at De Anza College.</p>
+  <div class="about-links rv" style="--d:.2s"><a class="lp" href="https://github.com/khaminh4622" target="_blank" rel="noopener"><svg><use href="#st"/></svg>github.com/khaminh4622</a><a class="lp linkedin" href="https://www.linkedin.com/in/kha-hoang-b60892337/" target="_blank" rel="noopener">in · LinkedIn</a></div>
+ </div>
+ <div class="pstack rv pop">
+  <img class="about-photo" src="portrait-about.jpg" alt="Kha taking a mirror selfie on public transit" loading="lazy">
+  <span class="py" style="top:5%;left:0">Class of 2026</span>
+  <span class="py" style="top:47%;right:-2%">San Jose, CA</span>
+  <div class="cc"><h3 class="scr">Contact</h3><ul><li>+1 (408) 123-4567</li><li>mkha4622@gmail.com</li><li><a href="https://github.com/khaminh4622" target="_blank" rel="noopener">github.com/khaminh4622</a></li><li><a href="https://www.linkedin.com/in/kha-hoang-b60892337/" target="_blank" rel="noopener">LinkedIn / kha-hoang</a></li></ul></div>
+ </div>
+</section>
+
+<section class="sec on-g" id="resume">
+ <div class="rgrid">
+  <div>
+   <h2 class="sc rv">Education</h2>
+   <div class="it rv l"><svg class="star"><use href="#st"/></svg><b>2026–now</b><div><b>De Anza College</b><small>Electrical Engineering</small></div></div>
+   <div class="it rv l"><svg class="star"><use href="#st"/></svg><b>2024–2026</b><div><b>Anaheim Discovery Christian School</b><small>High School Diploma · GPA 3.93 / 4.0</small></div></div>
+   <div class="xp rv pop">
+    <h2 class="sc">Experience</h2>
+    <div class="it"><svg class="star"><use href="#st"/></svg><b>2026</b><div><b>Co-Author, clothing AI paper</b><small>Stacked CNNs, PatchCore and XGBoost to sort clothes. 88.45% accuracy.</small></div></div>
+    <div class="it"><svg class="star"><use href="#st"/></svg><b>2025–26</b><div><b>OmniVox, MIT Beaver Works</b><small>PyQt6 touchscreen that helps patients with limited speech communicate.</small></div></div>
+    <div class="it"><svg class="star"><use href="#st"/></svg><b>2025</b><div><b>Live Healthy app</b><small>Flask app with personal health tips and a hospital locator.</small></div></div>
+    
+   </div>
+  </div>
+  <div id="skills">
+   <div class="rbg" aria-hidden="true"><span>RESUME</span><span>RESUME</span><span>RESUME</span></div>
+   <h2 class="sc rv">Technical skills</h2>
+   <p class="lab">Tools and apps</p>
+   <div class="tools"><div><img class="brand-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub logo"><b>Git / GitHub</b><small>Saves and shares my code</small></div><div><img class="brand-icon" src="https://api.iconify.design/simple-icons/autodesk.svg?color=%23ffb21a" alt="Autodesk logo (Fusion 360)"><b>Fusion 360</b><small>3D design</small></div><div><img class="brand-icon" src="https://api.iconify.design/simple-icons/dassaultsystemes.svg?color=%23ffb21a" alt="Dassault Systèmes logo (SolidWorks)"><b>SolidWorks</b><small>3D design</small></div><div><img class="brand-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/qt/qt-original.svg" alt="Qt logo (PyQt6)"><b>PyQt6</b><small>Touchscreen apps</small></div><div><img class="brand-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask logo"><b>Flask</b><small>Websites and apps</small></div></div>
+   <p class="lab">Coding skills</p>
+   <div class="cols"><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>XGBoost</span><span>Data augmentation</span></div>
+   <div class="pills"><span>CNNs</span><span>Vision Transformers</span><span>Ensemble methods</span><span>Data preprocessing</span></div>
+   <p class="lab" style="margin-top:20px">Also good at</p>
+   <div class="pills"><span>Machine learning</span><span>Accessibility design</span><span>Fast learner</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="cream more" id="more">
+ <div>
+  <h2 class="sc rv">Activities</h2>
+  <div class="it rv l"><svg class="star"><use href="#st"/></svg><b>2026</b><div><b>Cal Hacks, Personality AI</b><small>Built Recoi, a multi-agent finance app. Third-round winner.</small></div></div>
+  <div class="it rv l"><svg class="star"><use href="#st"/></svg><b>2025–26</b><div><b>Vice-Captain, Cross Country and Track</b><small>Anaheim Discovery Christian School</small></div></div>
+  <div class="it rv l"><svg class="star"><use href="#st"/></svg><b>2023–24</b><div><b>Photographer, Helianthus Photography Club</b><small>Trung Vuong High School</small></div></div>
+ </div>
+ <div>
+  <h2 class="sc rv">Quick facts</h2>
+  <div class="facts rv"><div><b>Studying</b><small>Electrical Engineering</small></div><div><b>Based in</b><small>San Jose, CA</small></div><div><b>Runs</b><small>Cross country and track</small></div></div>
+  <h2 class="sc rv">Hobbies &amp; Interests</h2>
+  <div class="hob rv"><div><svg viewBox="0 0 36 36" role="img" aria-label="Running icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="19" cy="6" r="3" fill="#e9a82c"/><path d="m15 14 7-3 5 6M16 13l-6 7 7 4-3 8M20 19l5 4-3 9M15 14l-5-1-5 4"/></svg><span>Running</span></div><div><svg viewBox="0 0 36 36" role="img" aria-label="Anime icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14q13-12 26 0l-3 13H8Z" fill="#f4bf52" fill-opacity=".24"/><path d="M8 15 12 5l5 6 7-7 3 10M7 18q11-6 22 0M12 20v2m12-2v2M14 27q4 4 8 0"/><path d="m3 7 3 2M31 5l-3 4"/></svg><span>Anime</span></div><div><svg viewBox="0 0 36 36" role="img" aria-label="Photography icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="28" height="20" rx="3" fill="#f4bf52" fill-opacity=".22"/><path d="M11 11 14 7h9l3 4M4 17h28"/><circle cx="18" cy="21" r="6"/><circle cx="18" cy="21" r="2" fill="#e9a82c"/><circle cx="28" cy="14" r="1" fill="#e9a82c"/></svg><span>Photography</span></div><div><svg viewBox="0 0 36 36" role="img" aria-label="Building AI icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="22" height="17" rx="2" fill="#f4bf52" fill-opacity=".24"/><path d="M18 24v5M11 29h14M13 14h10M13 18h10M18 4v3M4 15h3M29 15h3"/><circle cx="12" cy="10" r="1" fill="#e9a82c"/><path d="m13 14 5-4 5 4-5 5z"/></svg><span>Building AI</span></div><div><svg viewBox="0 0 36 36" role="img" aria-label="CAD design icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3 32 11v16l-14 8L4 27V11Z" fill="#f4bf52" fill-opacity=".18"/><path d="m4 11 14 8 14-8M18 19v16M11 7l14 8M25 7l-14 8"/><path d="m26 23 5 5m-1-9-9 9"/></svg><span>CAD design</span></div></div>
+ </div>
+</section>
+
+
+
+<section class="sec on-k" id="story">
+ <h2 class="h2 rv">My story</h2>
+ <p class="sub rv">3 years, 3 levels. Like a video game, but with more running.</p>
+ <div class="tl" id="tl">
+  <div class="step rv l"><i>1</i><h3>Level 1: Spawn point, America</h3><p>New country, new school, same love for running. I joined the cross country team, became vice-captain, and kept a 3.93 GPA at the same time.</p><p class="loot"><b>Boss:</b> homework and practice on the same day.<br><b>Loot:</b> vice-captain badge, 3.93 GPA, and a team academic award.</p></div>
+  <div class="step rv l"><i>2</i><h3>Level 2: Side quests unlocked</h3><p>I stopped just using apps and started making them. First a health app, then OmniVox with MIT Beaver Works: a touchscreen that speaks for patients who can’t.</p><p class="loot"><b>Boss:</b> “Why is this button not working?”<br><b>Loot:</b> two real projects and a pile of contest awards.</p></div>
+  <div class="step rv l"><i>3</i><h3>Level 3: Final boss season</h3><p>I co-wrote a paper on AI that sorts clothes, built Recoi (a team of AI helpers for invoices) at Cal Hacks, and started Electrical Engineering at De Anza.</p><p class="loot"><b>Boss:</b> a hackathon with almost no sleep.<br><b>Loot:</b> a research paper, a round 3 finish, and a new engineering path.</p></div>
+  <p class="tbc rv">To be continued… Next episode: De Anza.</p>
+ </div>
+</section>
+
+<section class="sec on-g" id="work">
+ <h2 class="h2 rv">Work</h2>
+ <p class="sub rv">Tap a card to flip it. Front = easy. Back = what it does and what’s inside.</p>
+ <div class="cards" id="cards"></div>
+</section>
+
+
+
+<section class="sec on-g" id="contact" style="position:relative">
+ <svg class="sp" style="--s:48px;right:8%;top:14%"><use href="#st"/></svg>
+ <svg class="sp" style="--s:30px;right:15%;top:30%;--dl:.9s"><use href="#st"/></svg>
+ <p class="big rv">Let’s build something.</p>
+ <div class="btns rv" style="--d:.15s"><a class="cta" href="mailto:mkha4622@gmail.com?subject=Hello%20Kha%20%E2%80%94%20Portfolio%20Inquiry" aria-label="Compose an email to Kha Hoang">Email me</a><a class="ghost" href="https://github.com/khaminh4622" target="_blank" rel="noopener noreferrer">GitHub</a><a class="ghost" href="https://www.instagram.com/hoangkha376/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+</section>
+<footer>Kha Hoang · San Jose, CA. Psst: press Tab twice.</footer>
+</div>
+<button class="secret" id="secret">Tap for a joke</button>
+
+<script>
+document.documentElement.classList.add("js");
+var $=function(i){return document.getElementById(i)},still=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var projectIcons={
+ earth:'<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26" fill="#78c4e8" stroke="#e8f5ff" stroke-width="2"/><path d="M16 12l13 4 4 10-5 8-13-2-7-10zm24 4 10 2 6 13-7 7-7-4-3-9-7-3zm-15 25 10-3 10 5-4 13-13 1-6-9z" fill="#67bc72"/><path d="M7 32h50M32 6c-12 13-12 39 0 52M32 6c12 13 12 39 0 52" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1.5"/></svg>',
+ finance:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="7" width="40" height="50" rx="7" fill="#ffd36b"/><path d="M20 20h24M20 29h13M20 38h15" stroke="#6f4d16" stroke-width="3" stroke-linecap="round"/><circle cx="44" cy="43" r="14" fill="#4ebca0" stroke="#0b0e0c" stroke-width="2"/><path d="M38 43l4 4 8-9" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+ voice:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="9" width="37" height="38" rx="11" fill="#b59cf2"/><path d="M20 46l-2 11 13-11" fill="#b59cf2"/><path d="M21 23h12M21 31h17" stroke="#46327d" stroke-width="3" stroke-linecap="round"/><path d="M51 20q10 12 0 24M45 25q6 7 0 14" fill="none" stroke="#ffd36b" stroke-width="3" stroke-linecap="round"/></svg>',
+ health:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="16" width="46" height="40" rx="8" fill="#ecf1f6"/><path d="M9 31h46" stroke="#b6d7d2" stroke-width="3"/><path d="M24 16v-7h16v7" fill="none" stroke="#ecf1f6" stroke-width="5"/><path d="M29 35h6v6h6v6h-6v6h-6v-6h-6v-6h6z" fill="#f4778f"/></svg>'
+};
+var cards=[
+ {icon:'earth',name:'Miniature Earth Game',desc:'An interactive ecosystem simulation exploring how wildlife populations change with their environment.',detail:'Explore virtual ecosystems, habitat suitability, and the effects of climate and resources on animal populations.',tech:'Python · FastAPI · Random Forest · WorldClim',url:'https://github.com/khaminh4622/ecosystem-evolution-simulato'},
+ {icon:'finance',name:'Reconcilo',desc:'A team of AI agents that checks invoices and helps prevent duplicate payments.',detail:'Built at Cal Hacks 2026. Specialized agents handle customer intake, duplicate detection, bank reconciliation, and payment exceptions.',tech:'AI agents · Python · Finance automation',url:'https://github.com/khaminh4622/Reconcilo'},
+ {icon:'voice',name:'OmniVox',desc:'An accessible touchscreen that helps people with limited speech communicate.',detail:'Created for MIT Beaver Works. Large touch-friendly controls help users express everyday needs and communicate with family.',tech:'PyQt6 · Accessibility · Text-to-speech',url:'https://github.com/khaminh4622/OmniVox'},
+ {icon:'health',name:'Live Healthy',desc:'A health information app with personalized guidance and a hospital locator.',detail:'Developed for the Congressional App Challenge, with wellness information and tools for finding nearby hospitals.',tech:'Flask · Geocoding · Mapping APIs',url:'https://github.com/khaminh4622/congress_app_nutrition'}
+];
+$("cards").innerHTML=cards.map(function(c,i){return '<div class="rv pop project-card" style="--d:'+(i*.1)+'s"><button class="flip" aria-pressed="false" aria-label="'+c.name+', tap to flip"><div class="inner"><div class="face"><div class="project-icon">'+projectIcons[c.icon]+'</div><h3>'+c.name+'</h3><p>'+c.desc+'</p><span class="tap">Tap to flip ↻</span></div><div class="face back"><h3>'+c.name+'</h3><p>'+c.detail+'</p><span class="tech">Tech: '+c.tech+'</span></div></div></button><a class="project-link" href="'+c.url+'" target="_blank" rel="noopener noreferrer" aria-label="View '+c.name+' source code on GitHub">View GitHub project ↗</a></div>'}).join("");
+document.querySelectorAll(".flip").forEach(function(b){b.onclick=function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!=="true")}});
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv,.step").forEach(function(el){io.observe(el)});
+var links=document.querySelectorAll("a.l"),so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-45% 0px -45% 0px"});
+document.querySelectorAll("section[id],#skills").forEach(function(s){so.observe(s)});
+
+
+var tl=$("tl"),bar=$("bar"),tick=false;
+function upd(){tick=false;var vh=innerHeight,h=document.documentElement.scrollHeight-vh;
+ bar.style.transform="scaleX("+(h>0?scrollY/h:0)+")";
+ 
+ 
+ var q=tl.getBoundingClientRect();tl.style.setProperty("--p",still?1:Math.max(0,Math.min(1,(vh*.7-q.top)/q.height)))}
+addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});addEventListener("resize",upd);upd();
+
+var ph=["AI that sorts clothes","apps that help people talk","bots that catch double payments","bugs (then I fix them)"],pi=0,sw=$("sw");
+if(!still)setInterval(function(){sw.classList.add("out");setTimeout(function(){pi=(pi+1)%ph.length;sw.textContent=ph[pi];sw.classList.remove("out")},350)},2600);
+
+
+
+
+var tabs=0,jk=["Why did the AI go to school? To improve its learning rate.","Cross country: “almost there” is a lie for 3 miles.","Why was the invoice nervous? It was about to be paid twice.","My model told a joke. Nobody laughed. It overfit."],ji=0,se=$("secret");
+document.addEventListener("keydown",function(e){if(e.key==="Tab"){tabs++;if(tabs===2)se.classList.add("show")}});
+se.onclick=function(){se.textContent=jk[ji++%jk.length]};
+</script>
+</body>
+</html>
